@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arm Exercises - The Fit Zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark px-3">
+    <div class="container-fluid px-3">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+                <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link active" href="arms.html">Arms</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<section class="text-center py-5">
+    <h1 class="mb-3">Arm Exercises</h1>
+    <p>Select an exercise to view details and log your workout.</p>
+</section>
+
+<div class="container pb-5">
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card shadow feature-card p-3">
+                <img src="images/placeholder-exercise.png" alt="Bicep Curl" class="w-100 mb-3" style="border-radius: 8px;">
+                <h4 class="text-white">Bicep Curl</h4>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <input type="hidden" name="exercise" value="Bicep Curl">
+                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
+                </form>
+
+                <a href="#curl-details" class="text-decoration-none mt-2 d-block">View Details</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow feature-card p-3">
+                <img src="images/placeholder-exercise.png" alt="Tricep Pushdown" class="w-100 mb-3" style="border-radius: 8px;">
+                <h4 class="text-white">Tricep Pushdown</h4>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <input type="hidden" name="exercise" value="Tricep Pushdown">
+                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
+                </form>
+
+                <a href="#pushdown-details" class="text-decoration-none mt-2 d-block">View Details</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow feature-card p-3">
+                <img src="images/placeholder-exercise.png" alt="Hammer Curl" class="w-100 mb-3" style="border-radius: 8px;">
+                <h4 class="text-white">Hammer Curl</h4>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <input type="hidden" name="exercise" value="Hammer Curl">
+                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
+                </form>
+
+                <a href="#hammer-details" class="text-decoration-none mt-2 d-block">View Details</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container pb-5">
+    <h2 class="mb-4">Exercise Details</h2>
+
+    <div class="accordion" id="exerciseDetails">
+
+        <div class="accordion-item bg-dark text-white" id="curl-details">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#curl">
+                    Bicep Curl
+                </button>
+            </h2>
+            <div id="curl" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <img src="images/placeholder-video.png" alt="Bicep Curl Video" class="w-100 mb-3" style="border-radius: 8px;">
+                    <p>Bicep curls target the biceps brachii and help build arm size and strength.</p>
+
+                    <table class="table table-dark table-striped">
+                        <tr><th>Primary Muscle</th><td>Biceps</td></tr>
+                        <tr><th>Secondary Muscles</th><td>Forearms</td></tr>
+                    </table>
+
+                    <form action="https://httpbin.org/get" method="get">
+                        <input type="hidden" name="exercise" value="Bicep Curl">
+                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item bg-dark text-white" id="pushdown-details">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#pushdown">
+                    Tricep Pushdown
+                </button>
+            </h2>
+            <div id="pushdown" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <img src="images/placeholder-video.png" alt="Tricep Pushdown Video" class="w-100 mb-3" style="border-radius: 8px;">
+                    <p>The tricep pushdown isolates the triceps and improves arm definition and pressing strength.</p>
+
+                    <table class="table table-dark table-striped">
+                        <tr><th>Primary Muscle</th><td>Triceps</td></tr>
+                        <tr><th>Secondary Muscles</th><td>Forearms, Shoulders</td></tr>
+                    </table>
+
+                    <form action="https://httpbin.org/get" method="get">
+                        <input type="hidden" name="exercise" value="Tricep Pushdown">
+                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item bg-dark text-white" id="hammer-details">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#hammer">
+                    Hammer Curl
+                </button>
+            </h2>
+            <div id="hammer" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <img src="images/placeholder-video.png" alt="Hammer Curl Video" class="w-100 mb-3" style="border-radius: 8px;">
+                    <p>Hammer curls build the brachialis and forearms, helping create thick, strong arms.</p>
+
+                    <table class="table table-dark table-striped">
+                        <tr><th>Primary Muscle</th><td>Brachialis</td></tr>
+                        <tr><th>Secondary Muscles</th><td>Biceps, Forearms</td></tr>
+                    </table>
+
+                    <form action="https://httpbin.org/get" method="get">
+                        <input type="hidden" name="exercise" value="Hammer Curl">
+                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="text-center py-4">
+    <div class="container">
+        <p class="mb-2">
+            <a href="index.html">Home</a> |
+            <a href="library.html">Exercise Library</a> |
+            <a href="logs.html">Logs</a> |
+            <a href="profile.html">Profile</a> |
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="mb-0">© 2025 The Fit Zone</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
