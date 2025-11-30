@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fit Zone | Member Feedback</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-light d-flex flex-column min-vh-100" style="background-color:#1d1d20;">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color:#1d1d20;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand me-auto" href="index.html">
+      <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+        <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Main -->
+  <main class="pt-5 mt-5 flex-grow-1">
+    <section class="container py-5">
+      <h1 class="fw-bold text-center mb-3">Member Feedback</h1>
+      <p class="text-secondary text-center mb-5">Help us improve your fitness experience by sharing your honest feedback below.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <div class="card text-light border-0 shadow-lg p-4" style="background-color:#2b2b2f;">
+            <form id="feedbackForm" novalidate>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" class="form-control bg-dark text-light border-secondary" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control bg-dark text-light border-secondary" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="goal" class="form-label">Your Fitness Goal</label>
+                <select id="goal" class="form-select bg-dark text-light border-secondary" required>
+                  <option value="">Select a Goal</option>
+                  <option value="weight">Weight Loss</option>
+                  <option value="muscle">Muscle Gain</option>
+                  <option value="endurance">Endurance</option>
+                  <option value="health">General Health</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label d-block">Gender</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rate Your Workout Satisfaction</label>
+                <select id="rating" class="form-select bg-dark text-light border-secondary" required>
+                  <option value="">Select Rating</option>
+                  <option value="1">1- Poor</option>
+                  <option value="2">2- Fair</option>
+                  <option value="3">3- Good</option>
+                  <option value="4">4- Very Good</option>
+                  <option value="5">5- Excellent</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Comments</label>
+                <textarea id="message" rows="4" class="form-control bg-dark text-light border-secondary" placeholder="Tell us how we can improve..." required></textarea>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="agree">
+                <label class="form-check-label" for="agree">I confirm that the information above is accurate.</label>
+              </div>
+
+              <button type="submit" class="btn text-light w-100" style="background-color:#FF6A00; border:none;">Submit Feedback</button>
+            </form>
+
+            <div id="feedbackResult" class="alert mt-4" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-secondary py-4 mt-auto" style="background-color:#1d1d20;">
+  <div class="container small">
+    <p class="mb-2">
+      <a href="index.html" class="link-light">Home</a> |
+      <a href="library.html" class="link-light">Exercise Library</a> |
+      <a href="logs.html" class="link-light">Logs</a> |
+      <a href="calculate.html" class="link-light">Calculator</a> |
+      <a href="profile.html" class="link-light">Profile</a> |
+      <a href="questionnaire.html" class="link-light">Feedback</a> |
+      <a href="funpage.html" class="link-light">Fun Page</a> |
+      <a href="about.html" class="link-light">About Us</a> |
+      <a href="contact.html" class="link-light">Contact</a>
+    </p>
+    <p class="mb-0 text-light">© 2025 The Fit Zone</p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jscript/questionnaire.js"></script>
+</body>
+</html>

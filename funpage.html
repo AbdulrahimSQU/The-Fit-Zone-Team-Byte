@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fit Zone | Muscle Match Quiz</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .draggable, .dropzone {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(45, 45, 45);
+      color: #f8f9fa;
+      border: 2px solid #444;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .draggable:hover, .dropzone:hover {
+      border-color: #FF6A00;
+      box-shadow: 0 0 10px #FF6A00;
+      transform: scale(1.03);
+      cursor: grab;
+    }
+
+    .border-success { border-color: #28a745 !important; }
+    .border-danger { border-color: #dc3545 !important; }
+  </style>
+</head>
+<body class="text-light d-flex flex-column min-vh-100 bg-dark">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color:#1d1d20;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand me-auto" href="index.html">
+      <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+        <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Main -->
+  <main class="pt-5 mt-5 flex-grow-1">
+    <section class="container py-5 text-center">
+      <h1 class="fw-bold mb-3 text-warning">Muscle Match Quiz</h1>
+      <p class="text-secondary mb-5">Drag each exercise into the correct muscle group box, then click <strong>Check Answers</strong> to see your score.</p>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Exercises -->
+        <div class="col-md-5">
+          <div class="card bg-dark text-light border-0 p-3">
+            <h5 class="fw-bold mb-3 text-warning">Exercises</h5>
+            <div id="exercises" class="d-flex flex-column gap-2">
+              <div class="draggable" draggable="true" data-muscle="Chest">Push-ups</div>
+              <div class="draggable" draggable="true" data-muscle="Legs">Squats</div>
+              <div class="draggable" draggable="true" data-muscle="Arms">Bicep Curls</div>
+              <div class="draggable" draggable="true" data-muscle="Core">Crunches</div>
+              <div class="draggable" draggable="true" data-muscle="Shoulders">Overhead Press</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Muscle Groups -->
+        <div class="col-md-5">
+          <div class="card bg-dark text-light border-0 p-3">
+            <h5 class="fw-bold mb-3 text-warning">Muscle Groups</h5>
+            <div id="muscles" class="d-flex flex-column gap-3">
+              <div class="dropzone" data-muscle="Chest">Chest</div>
+              <div class="dropzone" data-muscle="Legs">Legs</div>
+              <div class="dropzone" data-muscle="Arms">Arms</div>
+              <div class="dropzone" data-muscle="Core">Core</div>
+              <div class="dropzone" data-muscle="Shoulders">Shoulders</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="checkBtn" class="btn mt-4 text-light px-4 py-2" style="background-color:#FF6A00; border:none;">Check Answers</button>
+      <div id="result" class="mt-4 fw-bold"></div>
+    </section>
+  </main>
+
+  <footer class="text-center text-secondary py-4 mt-auto" style="background-color:#1d1d20;">
+  <div class="container small">
+    <p class="mb-2">
+      <a href="index.html" class="link-light">Home</a> |
+      <a href="library.html" class="link-light">Exercise Library</a> |
+      <a href="logs.html" class="link-light">Logs</a> |
+      <a href="calculate.html" class="link-light">Calculator</a> |
+      <a href="profile.html" class="link-light">Profile</a> |
+      <a href="questionnaire.html" class="link-light">Feedback</a> |
+      <a href="funpage.html" class="link-light">Fun Page</a> |
+      <a href="about.html" class="link-light">About Us</a> |
+      <a href="contact.html" class="link-light">Contact</a>
+    </p>
+    <p class="mb-0 text-light">© 2025 The Fit Zone</p>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jscript/funpage.js"></script>
+</body>
+</html>

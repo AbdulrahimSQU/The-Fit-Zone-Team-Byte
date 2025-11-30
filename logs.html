@@ -1,171 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logs - The Fit Zone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fit Zone | Workout Logs</title>
 
-<nav class="navbar navbar-expand-lg navbar-dark px-3">
-    <div class="container-fluid px-3">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
-                <li class="nav-item"><a class="nav-link active" href="logs.html">Logs</a></li>
-                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color:#1d1d20;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand me-auto" href="index.html">
+      <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+        <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<section class="text-center py-5">
-    <h1 class="mb-3">Record Your Workout</h1>
-    <p>Log exercises or runs using the forms below.</p>
-</section>
+  <!-- Main -->
+  <main class="pt-5 mt-5 flex-grow-1">
+    <section class="text-center py-5">
+      <div class="container">
+        <h1 class="fw-bold mb-3 text-warning">Record Your Workout</h1>
+        <p class="text-secondary mb-4">Log your exercises and runs below to keep track of your progress.</p>
+        <a href="#runLog" class="btn btn-outline-warning mb-5" style="border-color:#FF6A00; color:#FF6A00;">Go to Run Log</a>
 
-<div class="text-center mb-4">
-    <a href="#runLog" class="btn btn-outline-warning btn-sm">Go to Run Log</a>
-</div>
+        <div class="accordion" id="logAccordion">
 
-<div class="container pb-5">
-
-    <div class="accordion" id="logsAccordion">
-
-        <div class="accordion-item bg-dark text-white" id="workoutLog">
+          <!-- Workout Log -->
+          <div class="accordion-item text-light border border-secondary rounded-3 bg-secondary bg-opacity-10">
             <h2 class="accordion-header">
-                <button class="accordion-button bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#workoutForm">
-                    Workout Log
-                </button>
+              <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#workoutLog" aria-expanded="true">
+                Workout Log
+              </button>
             </h2>
+            <div id="workoutLog" class="accordion-collapse collapse show" data-bs-parent="#logAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="exerciseName" class="form-label">Exercise Name</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" id="exerciseName" required>
+                    <div class="invalid-feedback">Please enter an exercise name.</div>
+                  </div>
 
-            <div id="workoutForm" class="accordion-collapse collapse show">
-                <div class="accordion-body">
+                  <!-- Sets -->
+                  <h5 class="mt-4 mb-2">Set 1</h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Reps</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary" required>
+                      <div class="invalid-feedback">Enter reps.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Weight (kg)</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary" required>
+                      <div class="invalid-feedback">Enter weight.</div>
+                    </div>
+                  </div>
 
-                    <form action="https://httpbin.org/get" method="get">
+                  <h5 class="mt-4 mb-2">Set 2</h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Reps</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Weight (kg)</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary">
+                    </div>
+                  </div>
 
-                        <div class="mb-4">
-                            <label class="form-label">Exercise Name</label>
-                            <input type="text" name="exercise_name" class="form-control" required>
-                        </div>
+                  <h5 class="mt-4 mb-2">Set 3</h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Reps</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Weight (kg)</label>
+                      <input type="number" class="form-control bg-dark text-light border-secondary">
+                    </div>
+                  </div>
 
-                        <h5>Set 1</h5>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Reps</label>
-                                <input type="number" name="set1_reps" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Weight (kg)</label>
-                                <input type="number" name="set1_weight" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <h5>Set 2</h5>
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Reps</label>
-                                <input type="number" name="set2_reps" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Weight (kg)</label>
-                                <input type="number" name="set2_weight" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <h5>Set 3</h5>
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label class="form-label">Reps</label>
-                                <input type="number" name="set3_reps" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Weight (kg)</label>
-                                <input type="number" name="set3_weight" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-warning" type="submit">Submit Workout Log</button>
-
-                    </form>
-
-                </div>
+                  <button type="submit" class="btn btn-warning mt-4" style="background-color:#FF6A00; border:none;">Submit Workout Log</button>
+                </form>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="accordion-item bg-dark text-white" id="runLog">
+          <!-- Run Log -->
+          <div class="accordion-item text-light border border-secondary rounded-3 bg-secondary bg-opacity-10 mt-4" id="runLog">
             <h2 class="accordion-header">
-                <button class="accordion-button bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#runForm">
-                    Run Log
-                </button>
+              <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#runLogCollapse" aria-expanded="false">
+                Run Log
+              </button>
             </h2>
+            <div id="runLogCollapse" class="accordion-collapse collapse" data-bs-parent="#logAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Distance (km)</label>
+                      <input id="distance" type="number" class="form-control bg-dark text-light border-secondary" required>
+                      <div class="invalid-feedback">Enter distance.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Time (minutes)</label>
+                      <input id="time" type="number" class="form-control bg-dark text-light border-secondary" required>
+                      <div class="invalid-feedback">Enter time.</div>
+                    </div>
+                  </div>
 
-            <div id="runForm" class="accordion-collapse collapse show">
-                <div class="accordion-body">
+                  <div class="mb-3 mt-4">
+                    <label for="notes" class="form-label text-light">Notes</label>
+                    <input type="text" id="notes" name="notes" class="form-control bg-dark text-light border-secondary" placeholder="Add any notes about this run...">
+                  </div>
 
-                    <form action="https://httpbin.org/get" method="get">
+                  <div class="mb-3">
+                    <label class="form-label">Average Pace (min/km)</label>
+                    <input id="pace" type="text" class="form-control bg-dark text-light border-secondary" placeholder="Auto-calculated" readonly>
+                  </div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Distance (km)</label>
-                                <input type="number" name="distance" class="form-control" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Time (minutes)</label>
-                                <input type="number" name="time" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Terrain / Location</label>
-                            <input type="text" name="terrain" class="form-control" required>
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="form-label">Average Pace (auto in Phase 3)</label>
-                            <input type="text" name="pace" class="form-control" placeholder="e.g., 6:00 / km">
-                        </div>
-
-                        <button class="btn btn-warning" type="submit">Submit Run Log</button>
-
-                    </form>
-
-                </div>
+                  <button type="submit" class="btn btn-warning mt-2" style="background-color:#FF6A00; border:none;">Submit Run Log</button>
+                </form>
+              </div>
             </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+  </main>
 
-    </div>
-</div>
-
-<footer class="text-center py-4">
-    <div class="container">
-        <p class="mb-2">
-            <a href="index.html">Home</a> |
-            <a href="library.html">Exercise Library</a> |
-            <a href="logs.html">Logs</a> |
-            <a href="profile.html">Profile</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact</a>
-        </p>
-        <p class="mb-0">© 2025 The Fit Zone</p>
-    </div>
+  <footer class="text-center text-secondary py-4 mt-auto" style="background-color:#1d1d20;">
+  <div class="container small">
+    <p class="mb-2">
+      <a href="index.html" class="link-light">Home</a> |
+      <a href="library.html" class="link-light">Exercise Library</a> |
+      <a href="logs.html" class="link-light">Logs</a> |
+      <a href="calculate.html" class="link-light">Calculator</a> |
+      <a href="profile.html" class="link-light">Profile</a> |
+      <a href="questionnaire.html" class="link-light">Feedback</a> |
+      <a href="funpage.html" class="link-light">Fun Page</a> |
+      <a href="about.html" class="link-light">About Us</a> |
+      <a href="contact.html" class="link-light">Contact</a>
+    </p>
+    <p class="mb-0 text-light">© 2025 The Fit Zone</p>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  // Auto-calculate Average Pace
+  document.addEventListener("DOMContentLoaded", () => {
+    const distanceField = document.getElementById("distance");
+    const timeField = document.getElementById("time");
+    const paceField = document.getElementById("pace");
+
+    [distanceField, timeField].forEach(field => {
+      field.addEventListener("input", () => {
+        const dist = parseFloat(distanceField.value);
+        const time = parseFloat(timeField.value);
+        if (dist > 0 && time > 0) {
+          const pace = (time / dist).toFixed(2);
+          paceField.value = `${pace} min/km`;
+        } else {
+          paceField.value = "";
+        }
+      });
+    });
+  });
+
+  // Bootstrap Form Validation
+  (() => {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+  </script>
 
 </body>
 </html>
-
-
-

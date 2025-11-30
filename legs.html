@@ -1,189 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leg Exercises - The Fit Zone</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leg Exercises - The Fit Zone</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
 
-<nav class="navbar navbar-expand-lg navbar-dark px-3">
-    <div class="container-fluid px-3">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color:#1d1d20;">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand me-auto" href="index.html">
+        <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+          <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+          <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
-        </a>
+  <!-- Header -->
+  <header class="text-center pt-5 mt-5 mb-4">
+    <h1 class="fw-bold text-warning">Leg Exercises</h1>
+    <p class="text-secondary">Select an exercise to view details or quickly log your workout.</p>
+  </header>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Exercise Cards -->
+  <main class="container pb-5">
+    <div class="row g-4 justify-content-center">
 
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
-                <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
-                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link active" href="legs.html">Legs</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+      <div class="col-md-6">
+        <div class="card bg-dark border-0 text-light shadow-sm p-3 h-100">
+          <img src="images/placeholder-exercise.png" alt="Squat" class="img-fluid rounded mb-3">
+          <h4 class="text-warning">Squat</h4>
+          <form action="https://httpbin.org/get" method="get">
+            <input type="hidden" name="exercise" value="Squat">
+            <button class="btn text-light btn-sm mt-2" type="submit" style="background-color:#FF6A00;">Quick Log</button>
+          </form>
+          <a href="#squat-details" class="text-decoration-none text-light mt-2 d-block">View Details</a>
         </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card bg-dark border-0 text-light shadow-sm p-3 h-100">
+          <img src="images/placeholder-exercise.png" alt="Leg Press" class="img-fluid rounded mb-3">
+          <h4 class="text-warning">Leg Press</h4>
+          <form action="https://httpbin.org/get" method="get">
+            <input type="hidden" name="exercise" value="Leg Press">
+            <button class="btn text-light btn-sm mt-2" type="submit" style="background-color:#FF6A00;">Quick Log</button>
+          </form>
+          <a href="#legpress-details" class="text-decoration-none text-light mt-2 d-block">View Details</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card bg-dark border-0 text-light shadow-sm p-3 h-100">
+          <img src="images/placeholder-exercise.png" alt="Romanian Deadlift" class="img-fluid rounded mb-3">
+          <h4 class="text-warning">Romanian Deadlift</h4>
+          <form action="https://httpbin.org/get" method="get">
+            <input type="hidden" name="exercise" value="Romanian Deadlift">
+            <button class="btn text-light btn-sm mt-2" type="submit" style="background-color:#FF6A00;">Quick Log</button>
+          </form>
+          <a href="#rdl-details" class="text-decoration-none text-light mt-2 d-block">View Details</a>
+        </div>
+      </div>
 
     </div>
-</nav>
 
-<section class="text-center py-5">
-    <h1 class="mb-3">Leg Exercises</h1>
-    <p>Select an exercise to view details and log your workout.</p>
-</section>
+    <!-- Accordion Section -->
+    <section class="mt-5">
+      <h2 class="fw-bold text-warning mb-4">Exercise Details</h2>
+      <div class="accordion" id="exerciseDetails">
 
-<div class="container pb-5">
-    <div class="row g-4">
-
-        <div class="col-md-6">
-            <div class="card shadow feature-card p-3">
-                <img src="images/placeholder-exercise.png" alt="Squat" class="w-100 mb-3" style="border-radius: 8px;">
-                <h4 class="text-white">Squat</h4>
-
-                <form action="https://httpbin.org/get" method="get">
-                    <input type="hidden" name="exercise" value="Squat">
-                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
-                </form>
-
-                <a href="#squat-details" class="text-decoration-none mt-2 d-block">View Details</a>
+        <div class="accordion-item bg-dark border border-secondary" id="squat-details">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-dark text-light border-0" data-bs-toggle="collapse" data-bs-target="#squat">
+              Squat
+            </button>
+          </h2>
+          <div id="squat" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <img src="images/placeholder-video.png" alt="Squat Video" class="img-fluid rounded mb-3">
+              <p>The squat targets the quadriceps, glutes, and hamstrings, improving lower body strength and mobility.</p>
+              <table class="table table-dark table-striped">
+                <tr><th>Primary Muscle</th><td>Quadriceps</td></tr>
+                <tr><th>Secondary Muscles</th><td>Glutes, Hamstrings</td></tr>
+              </table>
+              <form action="https://httpbin.org/get" method="get">
+                <input type="hidden" name="exercise" value="Squat">
+                <button class="btn text-light mt-2" type="submit" style="background-color:#FF6A00;">Log This Exercise</button>
+              </form>
             </div>
+          </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card shadow feature-card p-3">
-                <img src="images/placeholder-exercise.png" alt="Leg Press" class="w-100 mb-3" style="border-radius: 8px;">
-                <h4 class="text-white">Leg Press</h4>
-
-                <form action="https://httpbin.org/get" method="get">
-                    <input type="hidden" name="exercise" value="Leg Press">
-                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
-                </form>
-
-                <a href="#legpress-details" class="text-decoration-none mt-2 d-block">View Details</a>
+        <div class="accordion-item bg-dark border border-secondary" id="legpress-details">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-dark text-light border-0" data-bs-toggle="collapse" data-bs-target="#legpress">
+              Leg Press
+            </button>
+          </h2>
+          <div id="legpress" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <img src="images/placeholder-video.png" alt="Leg Press Video" class="img-fluid rounded mb-3">
+              <p>The leg press is a machine-based exercise that develops powerful quads, glutes, and calves.</p>
+              <table class="table table-dark table-striped">
+                <tr><th>Primary Muscle</th><td>Quadriceps</td></tr>
+                <tr><th>Secondary Muscles</th><td>Glutes, Calves</td></tr>
+              </table>
+              <form action="https://httpbin.org/get" method="get">
+                <input type="hidden" name="exercise" value="Leg Press">
+                <button class="btn text-light mt-2" type="submit" style="background-color:#FF6A00;">Log This Exercise</button>
+              </form>
             </div>
+          </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card shadow feature-card p-3">
-                <img src="images/placeholder-exercise.png" alt="Romanian Deadlift" class="w-100 mb-3" style="border-radius: 8px;">
-                <h4 class="text-white">Romanian Deadlift</h4>
-
-                <form action="https://httpbin.org/get" method="get">
-                    <input type="hidden" name="exercise" value="Romanian Deadlift">
-                    <button class="btn btn-warning btn-sm mt-2" type="submit">Quick Log</button>
-                </form>
-
-                <a href="#rdl-details" class="text-decoration-none mt-2 d-block">View Details</a>
+        <div class="accordion-item bg-dark border border-secondary" id="rdl-details">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-dark text-light border-0" data-bs-toggle="collapse" data-bs-target="#rdl">
+              Romanian Deadlift
+            </button>
+          </h2>
+          <div id="rdl" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <img src="images/placeholder-video.png" alt="Romanian Deadlift Video" class="img-fluid rounded mb-3">
+              <p>The Romanian deadlift focuses on hamstrings, glutes, and lower back strength while improving hip hinge movement.</p>
+              <table class="table table-dark table-striped">
+                <tr><th>Primary Muscle</th><td>Hamstrings</td></tr>
+                <tr><th>Secondary Muscles</th><td>Glutes, Lower Back</td></tr>
+              </table>
+              <form action="https://httpbin.org/get" method="get">
+                <input type="hidden" name="exercise" value="Romanian Deadlift">
+                <button class="btn text-light mt-2" type="submit" style="background-color:#FF6A00;">Log This Exercise</button>
+              </form>
             </div>
+          </div>
         </div>
 
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-secondary py-4 mt-auto" style="background-color:#1d1d20;">
+    <div class="container small">
+      <p class="mb-2">
+        <a href="index.html" class="link-light">Home</a> |
+        <a href="library.html" class="link-light">Exercise Library</a> |
+        <a href="logs.html" class="link-light">Logs</a> |
+        <a href="calculate.html" class="link-light">Calculator</a> |
+        <a href="profile.html" class="link-light">Profile</a> |
+        <a href="questionnaire.html" class="link-light">Feedback</a> |
+        <a href="funpage.html" class="link-light">Fun Page</a>
+      </p>
+      <p class="mb-0 text-light">© 2025 The Fit Zone</p>
     </div>
-</div>
+  </footer>
 
-<div class="container pb-5">
-    <h2 class="mb-4">Exercise Details</h2>
-
-    <div class="accordion" id="exerciseDetails">
-
-        <div class="accordion-item bg-dark text-white" id="squat-details">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#squat">
-                    Squat
-                </button>
-            </h2>
-            <div id="squat" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <img src="images/placeholder-video.png" alt="Squat Video" class="w-100 mb-3" style="border-radius: 8px;">
-                    <p>The squat targets the quadriceps, glutes, and hamstrings, improving lower body strength.</p>
-
-                    <table class="table table-dark table-striped">
-                        <tr><th>Primary Muscle</th><td>Quadriceps</td></tr>
-                        <tr><th>Secondary Muscles</th><td>Glutes, Hamstrings</td></tr>
-                    </table>
-
-                    <form action="https://httpbin.org/get" method="get">
-                        <input type="hidden" name="exercise" value="Squat">
-                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item bg-dark text-white" id="legpress-details">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#legpress">
-                    Leg Press
-                </button>
-            </h2>
-            <div id="legpress" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <img src="images/placeholder-video.png" alt="Leg Press Video" class="w-100 mb-3" style="border-radius: 8px;">
-                    <p>The leg press is a machine-based exercise that builds quad, glute, and calf strength.</p>
-
-                    <table class="table table-dark table-striped">
-                        <tr><th>Primary Muscle</th><td>Quadriceps</td></tr>
-                        <tr><th>Secondary Muscles</th><td>Glutes, Calves</td></tr>
-                    </table>
-
-                    <form action="https://httpbin.org/get" method="get">
-                        <input type="hidden" name="exercise" value="Leg Press">
-                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item bg-dark text-white" id="rdl-details">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed bg-dark text-white" data-bs-toggle="collapse" data-bs-target="#rdl">
-                    Romanian Deadlift
-                </button>
-            </h2>
-            <div id="rdl" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <img src="images/placeholder-video.png" alt="Romanian Deadlift Video" class="w-100 mb-3" style="border-radius: 8px;">
-                    <p>The Romanian deadlift targets the hamstrings, glutes, and lower back.</p>
-
-                    <table class="table table-dark table-striped">
-                        <tr><th>Primary Muscle</th><td>Hamstrings</td></tr>
-                        <tr><th>Secondary Muscles</th><td>Glutes, Lower Back</td></tr>
-                    </table>
-
-                    <form action="https://httpbin.org/get" method="get">
-                        <input type="hidden" name="exercise" value="Romanian Deadlift">
-                        <button class="btn btn-warning mt-2" type="submit">Log This Exercise</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<footer class="text-center py-4">
-    <div class="container">
-        <p class="mb-2">
-            <a href="index.html">Home</a> |
-            <a href="library.html">Exercise Library</a> |
-            <a href="logs.html">Logs</a> |
-            <a href="profile.html">Profile</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact</a>
-        </p>
-        <p class="mb-0">© 2025 The Fit Zone</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

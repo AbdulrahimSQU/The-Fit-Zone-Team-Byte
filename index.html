@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Fit Zone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Fit Zone | Home</title>
 
-<nav class="navbar navbar-expand-lg navbar-dark px-3">
-    <div class="container-fluid px-3">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
-                <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
-                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color:#1d1d20;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand me-auto" href="index.html">
+      <img src="images/logo.png" alt="The Fit Zone Logo" height="55">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="library.html">Exercise Library</a></li>
+        <li class="nav-item"><a class="nav-link" href="logs.html">Logs</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<section class="hero d-flex align-items-center justify-content-center text-center">
-    <div class="hero-content text-white">
-        <h1 class="fw-bold mb-3">Start your fitness journey</h1>
-        <p class="mb-4">Learn proper techniques and track your progress with ease.</p>
-        <a href="library.html" class="btn btn-warning px-4 py-2">Explore Exercises</a>
+  <header class="d-flex align-items-start justify-content-center hero" style="background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('images/hero.jpg') center/cover no-repeat; height:100vh; padding-top:160px;">
+    <div class="container h-100 d-flex flex-column justify-content-between">
+      <div class="text-center mt-5">
+        <h1 class="display-4 fw-bold mb-3">Start your fitness journey</h1>
+        <p class="lead mb-4">Learn proper techniques and track your progress with ease.</p>
+        <a href="library.html" class="btn btn-lg text-light" style="background-color:#FF6A00; border:none;">Explore Exercises</a>
+      </div>
+
+      <div class="row gx-4 gy-4 justify-content-center align-items-stretch mt-3 mb-5">
+        <div class="col-md-4">
+          <div class="card text-light shadow-sm h-100" style="background-color:#3c3c3c;">
+            <div class="card-body d-flex flex-column justify-content-between text-center py-4">
+              <div>
+                <img src="images/exercise-icon.png" alt="" class="mb-3" width="40">
+                <h5 class="fw-bold" style="color:#FF6A00;">Exercise Library</h5>
+                <p class="small mb-3">Learn proper form with categorized exercise videos.</p>
+              </div>
+              <a href="library.html" class="btn text-light w-100" style="background-color:#FF6A00; border:none;">Go</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-light shadow-sm h-100" style="background-color:#3c3c3c;">
+            <div class="card-body d-flex flex-column justify-content-between text-center py-4">
+              <div>
+                <img src="images/log-icon.png" alt="" class="mb-3" width="40">
+                <h5 class="fw-bold" style="color:#FF6A00;">Workout Logs</h5>
+                <p class="small mb-3">Track your workouts and runs easily.</p>
+              </div>
+              <a href="logs.html" class="btn text-light w-100" style="background-color:#FF6A00; border:none;">Go</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-light shadow-sm h-100" style="background-color:#3c3c3c;">
+            <div class="card-body d-flex flex-column justify-content-between text-center py-4">
+              <div>
+                <img src="images/profile-icon.png" alt="" class="mb-3" width="40">
+                <h5 class="fw-bold" style="color:#FF6A00;">Profile & Progress</h5>
+                <p class="small mb-3">Visualize your improvement over time.</p>
+              </div>
+              <a href="profile.html" class="btn text-light w-100" style="background-color:#FF6A00; border:none;">Go</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </header>
 
-<div class="container position-relative" style="margin-top: -380px; margin-bottom: 200px; z-index: 5;">
-    <div class="row g-4 justify-content-center align-items-stretch">
-
-        <div class="col-md-4 d-flex">
-            <div class="card text-center shadow feature-card p-3 w-100">
-                <img src="images/exercise-icon.png" alt="Dumbell Icon" class="mx-auto my-3" style="width:60px;">
-                <h4>Exercise Library</h4>
-                <p>Learn proper form with categorized exercise videos.</p>
-                <a href="library.html" class="btn btn-warning btn-sm">Go</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 d-flex">
-            <div class="card text-center shadow feature-card p-3 w-100">
-                <img src="images/log-icon.png" alt="Workout Logs" class="mx-auto my-3" style="width:60px;">
-                <h4>Workout Logs</h4>
-                <p>Track your workouts and runs easily.</p>
-                <a href="logs.html" class="btn btn-warning btn-sm">Go</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 d-flex">
-            <div class="card text-center shadow feature-card p-3 w-100">
-                <img src="images/profile-icon.png" alt="Profile" class="mx-auto my-3" style="width:60px;">
-                <h4>Profile & Progress</h4>
-                <p>Visualize your improvement over time.</p>
-                <a href="profile.html" class="btn btn-warning btn-sm">Go</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<section class="intro text-center py-5">
+  <section class="bg-dark text-center text-light py-5">
     <div class="container">
-        <h2 class="mb-3">Welcome to The Fit Zone</h2>
-        <p class="mx-auto" style="max-width:650px;">
-            We help people feel confident starting their fitness journey by providing short videos, logs, and progress tracking. Start today and see your progress grow!
-        </p>
+      <h2 class="h3 fw-normal mb-3">Welcome to The Fit Zone</h2>
+      <p class="mx-auto" style="max-width:800px;">
+        We help people feel confident starting their fitness journey by providing short videos, logs, and progress tracking. Start today and see your progress grow!
+      </p>
     </div>
-</section>
+  </section>
 
-<footer class="text-center py-4">
-    <div class="container">
-        <p class="mb-2">
-            <a href="index.html">Home</a> |
-            <a href="library.html">Exercise Library</a> |
-            <a href="logs.html">Logs</a> |
-            <a href="profile.html">Profile</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact</a>
-        </p>
-        <p class="mb-0">© 2025 The Fit Zone</p>
-    </div>
+  <footer class="text-center text-secondary py-4 mt-auto" style="background-color:#1d1d20;">
+  <div class="container small">
+    <p class="mb-2">
+      <a href="index.html" class="link-light">Home</a> |
+      <a href="library.html" class="link-light">Exercise Library</a> |
+      <a href="logs.html" class="link-light">Logs</a> |
+      <a href="calculate.html" class="link-light">Calculator</a> |
+      <a href="profile.html" class="link-light">Profile</a> |
+      <a href="questionnaire.html" class="link-light">Feedback</a> |
+      <a href="funpage.html" class="link-light">Fun Page</a> |
+      <a href="about.html" class="link-light">About Us</a> |
+      <a href="contact.html" class="link-light">Contact</a>
+    </p>
+    <p class="mb-0 text-light">© 2025 The Fit Zone</p>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
